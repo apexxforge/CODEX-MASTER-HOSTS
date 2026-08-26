@@ -7,7 +7,7 @@ import requests
 import telebot
 from flask import Flask
 
-TELEGRAM_BOT_TOKEN = "8975065411:AAE8wUwhTBEUsq_Mxj2n8XWHHBCtRpodUYA"
+TELEGRAM_BOT_TOKEN = "8936179334:AAForzGiP4SavdrSSUZ4wwQj5MxDwyOHhZs"
 GROQ_API_KEY = "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"
 
 bot = telebot.TeleBot(TELEGRAM_BOT_TOKEN)

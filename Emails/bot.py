@@ -77,7 +77,6 @@ def fetch_player_full_profile(token):
     except Exception:
         return None
 
-# Pure Inline Menu (No Reply Keyboards)
 def main_menu_inline():
     return InlineKeyboardMarkup(
         inline_keyboard=[
@@ -315,10 +314,15 @@ async def main():
     bot = Bot(token=TOKEN)
     dp = Dispatcher(storage=MemoryStorage())
     dp.include_router(router)
-    print("[*] Bot running successfully with clean Inline Menus...")
+    
+    await bot.delete_webhook(drop_pending_updates=True)
+    print("[*] Bot successfully started polling with new token...")
     await dp.start_polling(bot)
 
 if __name__ == "__main__":
     import asyncio
-    asyncio.run(main())
+    try:
+        asyncio.run(main())
+    except (KeyboardInterrupt, SystemExit):
+        print("[!] Bot stopped.")
     

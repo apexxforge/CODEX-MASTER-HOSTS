@@ -11,26 +11,12 @@ app = Flask(__name__)
 def home():
     return "🔥 Apex Ultimate Shield Master Host is 100% Active & Protecting All Bots 24/7!"
 
-def install_bot_requirements(folder_path):
-    req_file = os.path.join(folder_path, "requirements.txt")
-    if os.path.exists(req_file):
-        try:
-            print(f"[📦] Installing/Updating requirements for: {folder_path}")
-            subprocess.run([sys.executable, "-m", "pip", "install", "-r", req_file], check=True)
-        except Exception as e:
-            print(f"[!] Requirement install warning for {folder_path}: {e}")
-
 def run_bot_script(folder_name):
     bot_folder_path = os.path.abspath(folder_name)
-    bot_file = os.path.join(bot_folder_path, "bot.py")
     
-    # Dependencies check karke install karega
-    install_bot_requirements(bot_folder_path)
-
     while True:
         try:
             print(f"[*] Starting bot instance: {folder_name}")
-            # Subprocess ke logs capture karne ke liye
             process = subprocess.Popen(
                 [sys.executable, "bot.py"], 
                 cwd=bot_folder_path,
@@ -40,7 +26,6 @@ def run_bot_script(folder_name):
                 bufsize=1
             )
             
-            # Live console mein bot ka output print karega
             for line in process.stdout:
                 print(f"[{folder_name}] {line.strip()}")
                 

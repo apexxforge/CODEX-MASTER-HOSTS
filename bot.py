@@ -24,20 +24,28 @@ def run_bot_script(folder_name):
     bot_folder_path = os.path.abspath(folder_name)
     bot_file = os.path.join(bot_folder_path, "bot.py")
     
-    # Har bot ki apni requirements pehle check karke install karega
+    # Dependencies check karke install karega
     install_bot_requirements(bot_folder_path)
 
     while True:
         try:
             print(f"[*] Starting bot instance: {folder_name}")
+            # Subprocess ke logs capture karne ke liye
             process = subprocess.Popen(
                 [sys.executable, "bot.py"], 
-                cwd=bot_folder_path
+                cwd=bot_folder_path,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.STDOUT,
+                text=True,
+                bufsize=1
             )
-            # Jab tak bot chal raha hai tab tak wait karega
-            process.wait()
             
-            print(f"[!] Warning: Bot in '{folder_name}' stopped unexpectedly. Auto-restarting in 3 seconds...")
+            # Live console mein bot ka output print karega
+            for line in process.stdout:
+                print(f"[{folder_name}] {line.strip()}")
+                
+            process.wait()
+            print(f"[!] Warning: Bot in '{folder_name}' stopped. Auto-restarting in 3 seconds...")
         except Exception as e:
             print(f"[!] Error in bot loop ({folder_name}): {e}")
         
@@ -62,4 +70,4 @@ if __name__ == "__main__":
     start_all_bots()
     port = int(os.environ.get("PORT", 10000))
     app.run(host="0.0.0.0", port=port)
-  
+    

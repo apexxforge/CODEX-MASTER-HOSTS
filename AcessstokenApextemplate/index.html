@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="description" content="Generate Free Fire access tokens easily with Apex X Forge's Access Generator. Get your FF token instantly.">
+    <meta name="google-site-verification" content="qzVNIIPBo113_dzwY5oR37s4zWrX353ihmVUhQr_cK0" />
+    <title>Free Fire Eat To access Token Tool | Apex X Forge</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap');
+        :root {
+            --primary: #ff3366;
+            --primary-glow: rgba(255, 51, 102, 0.4);
+            --dark-bg: #030008;
+        }
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: var(--dark-bg);
+            color: #e2e8f0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow-x: hidden;
+            padding: 20px;
+            background-image: radial-gradient(circle at 50% 10%, rgba(255, 51, 102, 0.08) 0%, transparent 60%), linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px);
+            background-size: 100% 100%, 30px 30px;
+        }
+        .cyber-card {
+            background: rgba(10, 10, 16, 0.9);
+            backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 51, 102, 0.25);
+            border-radius: 28px;
+            box-shadow: 0 25px 60px -15px rgba(0,0,0,0.9), 0 0 35px rgba(255, 51, 102, 0.12);
+            position: relative;
+            overflow: hidden;
+        }
+        .cyber-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 28px;
+            padding: 1px;
+            background: linear-gradient(180deg, rgba(255, 51, 102, 0.6), transparent 50%);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+        .title-font { font-family: 'Rajdhani', sans-serif; }
+        
+        .logo-glow {
+            animation: firePulse 3s infinite ease-in-out;
+        }
+        @keyframes firePulse {
+            0% { box-shadow: 0 0 20px rgba(255, 51, 102, 0.5), inset 0 0 15px rgba(255, 100, 0, 0.4); transform: scale(1); }
+            50% { box-shadow: 0 0 40px rgba(255, 100, 0, 0.9), inset 0 0 25px rgba(255, 51, 102, 0.7); transform: scale(1.02); }
+            100% { box-shadow: 0 0 20px rgba(255, 51, 102, 0.5), inset 0 0 15px rgba(255, 100, 0, 0.4); transform: scale(1); }
+        }
+
+        .cyber-input {
+            background: rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #fff;
+            font-family: monospace;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .cyber-input:focus {
+            border-color: var(--primary);
+            background: rgba(0, 0, 0, 0.8);
+            box-shadow: 0 0 25px var(--primary-glow);
+            outline: none;
+        }
+        .btn-grad {
+            background-image: linear-gradient(135deg, #ff416c 0%, #ff4b2b 50%, #ff3366 100%);
+            background-size: 200% auto;
+            transition: 0.4s;
+            border: none;
+            box-shadow: 0 0 25px rgba(255, 65, 108, 0.5);
+        }
+        .btn-grad:hover {
+            background-position: right center;
+            box-shadow: 0 0 35px rgba(255, 75, 43, 0.8);
+            transform: translateY(-2px);
+        }
+        .social-icon-btn {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.25s ease;
+        }
+        .social-icon-btn:hover {
+            background: rgba(255, 51, 102, 0.12);
+            border-color: rgba(255, 51, 102, 0.5);
+            transform: translateY(-2px);
+        }
+        .tutorial-link {
+            background: rgba(255, 51, 102, 0.07);
+            border: 1px dashed rgba(255, 51, 102, 0.4);
+            transition: all 0.25s ease;
+        }
+        .tutorial-link:hover {
+            background: rgba(255, 51, 102, 0.15);
+            border-color: #ff3366;
+        }
+    </style>
+</head>
+<body>
+    <!-- Audio element for touch pop sound effect -->
+    <audio id="popSound" src="https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3" preload="auto"></audio>
+
+    <div class="w-full max-w-[480px] relative z-10">
+        <div class="cyber-card p-6 sm:p-8">
+            <!-- Profile Circle Container with logo.png -->
+            <div class="flex flex-col items-center mb-5">
+                <div class="relative w-28 h-28 mb-3 rounded-full p-1 bg-gradient-to-tr from-orange-500 via-red-500 to-pink-500 logo-glow">
+                    <img src="logo.png" class="w-full h-full rounded-full object-cover bg-black" alt="Apex X Forge Animated Logo">
+                </div>
+                <h1 class="text-xl font-bold title-font text-white text-center leading-tight tracking-wider">
+                    ACCESS GENERATOR <br>
+                    <span class="text-rose-400 text-xs font-semibold tracking-widest uppercase">by Apex X Forge</span>
+                </h1>
+            </div>
+
+            <!-- Sleek Compact Social Media Icons Bar right below profile -->
+            <div class="mb-5 flex items-center justify-center gap-3">
+                <a href="https://youtube.com/@apexxforge" target="_blank" class="social-icon-btn w-10 h-10 rounded-xl flex items-center justify-center text-white shadow-sm" title="YouTube">
+                    <i class="fab fa-youtube text-red-500 text-base"></i>
+                </a>
+                <a href="https://t.me/ApexXForge" target="_blank" class="social-icon-btn w-10 h-10 rounded-xl flex items-center justify-center text-white shadow-sm" title="Telegram">
+                    <i class="fab fa-telegram text-sky-400 text-base"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" class="social-icon-btn w-10 h-10 rounded-xl flex items-center justify-center text-white shadow-sm opacity-70 hover:opacity-100" title="Instagram">
+                    <i class="fab fa-instagram text-pink-500 text-base"></i>
+                </a>
+                <a href="https://github.com" target="_blank" class="social-icon-btn w-10 h-10 rounded-xl flex items-center justify-center text-white shadow-sm opacity-70 hover:opacity-100" title="GitHub">
+                    <i class="fab fa-github text-white text-base"></i>
+                </a>
+            </div>
+
+            <a href="https://youtu.be/vEmxuxdz0QI" target="_blank" class="tutorial-link w-full flex items-center justify-between gap-2 p-3 rounded-xl mb-3 transition group">
+                <div class="flex items-center gap-3">
+                    <img src="https://raw.githubusercontent.com/KillerSharmaBot/Eat-Token/refs/heads/main/image/YouTube.png" class="w-5 h-5 object-contain" alt="YT">
+                    <div class="text-left">
+                        <span class="text-[11px] font-bold text-white uppercase tracking-wider">FULL TUTORIAL</span>
+                        <p class="text-[9px] text-gray-400">click to watch how to get eat token</p>
+                    </div>
+                </div>
+                <i class="fas fa-arrow-right text-rose-400 group-hover:translate-x-1 transition"></i>
+            </a>
+
+            <a href="https://youtu.be/vEmxuxdz0QI" target="_blank" class="tutorial-link w-full flex items-center justify-between gap-2 p-3 rounded-xl mb-5 transition group">
+                <div class="flex items-center gap-3">
+                    <img src="https://raw.githubusercontent.com/KillerSharmaBot/Eat-Token/refs/heads/main/image/YouTube.png" class="w-5 h-5 object-contain" alt="YT">
+                    <div class="text-left">
+                        <span class="text-[11px] font-bold text-white uppercase tracking-wider">2ND METHOD</span>
+                        <p class="text-[9px] text-gray-400">click to watch how to get access token</p>
+                    </div>
+                </div>
+                <i class="fas fa-arrow-right text-rose-400 group-hover:translate-x-1 transition"></i>
+            </a>
+
+            <!-- Error-free Clickable Video Card Player with your video -->
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-3 mb-5 shadow-inner">
+                <div class="flex items-center justify-between mb-2 px-1">
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-play-circle text-rose-400 text-xs"></i>
+                        <span class="text-xs font-bold text-white uppercase tracking-wider">Watch Tutorial Video</span>
+                    </div>
+                    <span class="text-[10px] text-rose-400 font-semibold animate-pulse">LIVE GUIDE</span>
+                </div>
+                <a href="https://youtu.be/vEmxuxdz0QI" target="_blank" class="relative block w-full overflow-hidden rounded-xl pt-[52%] bg-black/80 border border-white/10 group">
+                    <img src="https://img.youtube.com/vi/vEmxuxdz0QI/hqdefault.jpg" class="absolute inset-0 w-full h-full object-cover opacity-75 group-hover:scale-105 transition duration-300" alt="Video Thumbnail">
+                    <div class="absolute inset-0 flex items-center justify-center bg-black/40 group-hover:bg-black/20 transition">
+                        <div class="w-12 h-12 rounded-full bg-rose-600/90 flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition">
+                            <i class="fas fa-play text-sm ml-0.5"></i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="mb-5">
+                <div class="flex justify-between items-end mb-2">
+                    <span class="text-xs font-bold text-gray-400 uppercase tracking-wider">Select Provider & Login</span>
+                </div>
+                <div class="grid grid-cols-5 gap-2">
+                    <a href="https://auth.garena.com/universal/oauth?platform=8&response_type=code&locale=en-SG&client_id=100067&redirect_uri=https://api.ff.garena.co.id/auth/auth/callback_n?site=https://api-discountstore.kiosgamer.gameid.garena.co.id/oauth/callback_redirect/" target="_blank" class="social-icon-btn h-12 rounded-xl flex items-center justify-center">
+                        <img src="https://raw.githubusercontent.com/KillerSharmaBot/Eat-Token/refs/heads/main/image/Google.png" class="w-5 h-5 object-contain">
+                    </a>
+                    <a href="https://auth.garena.com/universal/oauth?platform=3&response_type=code&locale=en-SG&client_id=100067&redirect_uri=https://api.ff.garena.co.id/auth/auth/callback_n?site=https://api-discountstore.kiosgamer.gameid.garena.co.id/oauth/callback_redirect/" target="_blank" class="social-icon-btn h-12 rounded-xl flex items-center justify-center">
+                        <img src="https://raw.githubusercontent.com/KillerSharmaBot/Eat-Token/refs/heads/main/image/Facebook.png" class="w-5 h-5 object-contain">
+                    </a>
+                    <a href="https://auth.garena.com/universal/oauth?platform=10&response_type=code&locale=en-SG&client_id=100067&redirect_uri=https://api.ff.garena.co.id/auth/auth/callback_n?site=https://api-discountstore.kiosgamer.gameid.garena.co.id/oauth/callback_redirect/" target="_blank" class="social-icon-btn h-12 rounded-xl flex items-center justify-center">
+                        <i class="fab fa-apple text-xl text-white"></i>
+                    </a>
+                    <a href="https://auth.garena.com/universal/oauth?platform=11&response_type=code&locale=en-SG&client_id=100067&redirect_uri=https://api.ff.garena.co.id/auth/auth/callback_n?site=https://api-discountstore.kiosgamer.gameid.garena.co.id/oauth/callback_redirect/" target="_blank" class="social-icon-btn h-12 rounded-xl flex items-center justify-center">
+                        <img src="https://raw.githubusercontent.com/KillerSharmaBot/Eat-Token/refs/heads/main/image/X.png" class="w-5 h-5 object-contain rounded-full">
+                    </a>
+                    <a href="https://auth.garena.com/universal/oauth?platform=5&response_type=code&locale=en-SG&client_id=100067&redirect_uri=https://api.ff.garena.co.id/auth/auth/callback_n?site=https://api-discountstore.kiosgamer.gameid.garena.co.id/oauth/callback_redirect/" target="_blank" class="social-icon-btn h-12 rounded-xl flex items-center justify-center">
+                        <img src="https://raw.githubusercontent.com/KillerSharmaBot/Eat-Token/refs/heads/main/image/VK.png" class="w-5 h-5 object-contain rounded-full">
+                    </a>
+                </div>
+            </div>
+
+            <div class="mb-5">
+                <div class="relative group">
+                    <input type="text" id="tokenInp" class="cyber-input w-full rounded-xl py-3.5 pl-4 pr-10 text-sm placeholder-gray-500" placeholder="Paste kiosgamer URL or Eat token here..." autocomplete="off">
+                    <button onclick="clearInput()" id="clearBtn" class="absolute right-3 top-3.5 text-gray-500 hover:text-red-500 transition hidden"><i class="fas fa-times text-lg"></i></button>
+                </div>
+                <div class="flex justify-between mt-2">
+                    <span class="text-[10px] text-gray-500">Supports full URL or raw token</span>
+                </div>
+            </div>
+
+            <button onclick="processToken()" id="btn" class="btn-grad w-full rounded-xl py-4 font-bold title-font text-white text-base tracking-widest flex items-center justify-center gap-2 mb-2 shadow-lg">
+                GENERATE ACCESS <i class="fas fa-arrow-right text-xs"></i>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Global Touch Pop Sound Effect Listener for every tap/click interaction
+        function playPopSound() {
+            const sound = document.getElementById('popSound');
+            if (sound) {
+                sound.currentTime = 0;
+                sound.play().catch(e => {});
+            }
+        }
+
+        document.addEventListener('click', function(e) {
+            playPopSound();
+        });
+    </script>
+</body>
+</html>

@@ -25,7 +25,7 @@ from aiogram.types import (
 # ============================================================
 
 # Paste your Telegram Bot Token here
-BOT_TOKEN = "8921793709:AAFiPCtF7siNUh3exBQI9wq_DxRz_0nDVyk"
+BOT_TOKEN = "8638501669:AAHUgxWcM5RRgiaDWw6w0pz5bvpUPH4DdOo"
 
 PLAYER_API = "https://player-info-ob54.vercel.app/player-info"
 BAN_API = "https://nirob-ban-check.vercel.app/bancheck"

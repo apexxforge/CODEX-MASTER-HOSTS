@@ -915,11 +915,11 @@ def admin_command_allowed(message, command):
 def start_handler(message):
     get_user_data(message.from_user.id)
     if message.chat.type in ("group","supergroup"):
-        bot.reply_to(message, "Heyy ✨ Main yahan advanced security ke saath hoon. Group AI chat ke liye Admin <code>/aiwake</code> aur silent mode ke liye <code>/aisleep</code> use kar sakte hain.", parse_mode="HTML", reply_markup=telebot.types.ReplyKeyboardRemove())
+        bot.reply_to(message, "Heyy ✨🌸 Kaise Ho Sab Logs 😊. Group AI chat ke liye Admin <code>/aiwake</code> aur silent mode ke liye <code>/aisleep</code> use kar sakte hain.", parse_mode="HTML", reply_markup=telebot.types.ReplyKeyboardRemove())
     else:
         if not private_access_allowed(message):
             return
-        bot.reply_to(message, "Heyy ✨ Main yahan hoon. Batao, kya baat karni hai?", reply_markup=telebot.types.ReplyKeyboardRemove())
+        bot.reply_to(message, "Heyy ✨❤️ Kaise Ho tum 🌸 Aur Tumhara Kya naam hai?", reply_markup=telebot.types.ReplyKeyboardRemove())
 
 @bot.message_handler(commands=["aiwake"])
 def aiwake(message):

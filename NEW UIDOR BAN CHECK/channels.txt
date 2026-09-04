@@ -1,0 +1,5 @@
+# One public channel per line.
+# You can use @username or full t.me links.
+
+https://t.me/ApexXchannels
+https://t.me/ApexXGroups

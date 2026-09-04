@@ -9,3 +9,4 @@ python-telegram-bot
 pillow
 colorama
 python-dotenv
+telethon
